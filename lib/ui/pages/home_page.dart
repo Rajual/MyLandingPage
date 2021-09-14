@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/ui/views/about_view.dart';
+import 'package:my_landing_page/ui/views/contact_view.dart';
 import 'package:my_landing_page/ui/views/home_view.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          const _HomeBody(),
+          _HomeBody(),
           Positioned(
               right: 20,
               top: 20,
@@ -25,14 +27,12 @@ class HomePage extends StatelessWidget {
 }
 
 class _HomeBody extends StatelessWidget {
-  const _HomeBody({Key? key}) : super(key: key);
+  _HomeBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PageView(
-      children: [
-        const HomeView(),
-      ],
+      children: [HomeView(), AboutView(), ContactView()],
     );
   }
 }
