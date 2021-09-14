@@ -11,7 +11,7 @@ class ContactView extends StatelessWidget {
       child: Center(
         child: FittedBox(
           child: Text(
-            'About',
+            'Contact',
             style: GoogleFonts.montserratAlternates(
                 fontSize: 80, fontWeight: FontWeight.bold),
           ),
