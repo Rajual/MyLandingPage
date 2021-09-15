@@ -51,7 +51,9 @@ class _CustomAppMenuState extends State<CustomAppMenu>
                 CustomMenuItem(
                     text: 'Home', onPressed: () => pageProvider.goTo(0)),
                 CustomMenuItem(
-                    text: 'About', onPressed: () => pageProvider.goTo(1))
+                    text: 'About', onPressed: () => pageProvider.goTo(1)),
+                CustomMenuItem(
+                    text: 'Contact', onPressed: () => pageProvider.goTo(2))
               ]
             ],
           ),

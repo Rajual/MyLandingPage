@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/providers/page_provider.dart';
 import 'package:my_landing_page/routers/router.dart';
-import 'package:my_landing_page/ui/pages/home_page.dart';
+
 import 'package:provider/provider.dart';
 
 void main() => runApp(const AppState());
@@ -17,13 +17,13 @@ class AppState extends StatelessWidget {
           create: (_) => PageProvider(),
         )
       ],
-      child: MyApp(),
+      child: const MyApp(),
     );
   }
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
