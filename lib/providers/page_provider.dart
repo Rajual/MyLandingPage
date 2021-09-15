@@ -7,6 +7,14 @@ class PageProvider extends ChangeNotifier {
   PageController scrollController = PageController();
 
   final List<String> _pages = ['home', 'about', 'contact'];
+//TODO: Fixe it.
+  createScrollController(String routerName){
+    this.scrollController=new PageController(initialPage: )
+  }
+
+  int getPageIndex(String routrName){
+    return (!_pages.contains(routrName))?0:_pages.indexOf(routrName);
+  }
 
   goTo(int index) {
     final routeName = _pages[index];
