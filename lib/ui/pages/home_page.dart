@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:my_landing_page/providers/page_provider.dart';
@@ -14,14 +12,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: buildBoxDecoration(),
-        child: Stack(
-          children: const [
-            _HomeBody(),
-            Positioned(right: 20, top: 20, child: CustomAppMenu())
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          decoration: buildBoxDecoration(),
+          child: Stack(
+            children: const [
+              _HomeBody(),
+              Positioned(right: 20, top: 20, child: CustomAppMenu())
+            ],
+          ),
         ),
       ),
     );
